@@ -15,6 +15,14 @@ vim.keymap.set("n", "<leader>li", function()
   vim.print(vim.lsp.get_clients())
 end, { desc = "LSP Info" })
 
+-- Splits in horizontal/veritical buffers in vim
+vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", { desc = "Vertical split" })
+vim.keymap.set("n", "<leader>sh", ":split<CR>", { desc = "Horizontal split" })
+
+-- Faster shortcuts for saving/closing
+vim.keymap.set("n", "<leader>w", ":w<CR>")
+vim.keymap.set("n", "<leader>q", ":q<CR>")
+
 -- Seamless navigation (tmux + nvim)
 vim.keymap.set("n", "<C-h>", "<cmd>TmuxNavigateLeft<CR>")
 vim.keymap.set("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>")
